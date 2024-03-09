@@ -2,17 +2,22 @@
   "name": "fakeapi",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "server": "nodemon server.js",
+    "client": "cd ../client && npm start",
+    "dev": "concurrently \" npm run server \" \" npm run client \""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "json-server": "^0.17.3"
+    "concurrently": "^8.2.2",
+    "json-server": "^0.17.3",
+    "nodemon": "^3.1.0"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "zod": "^3.22.4"
   }
 }

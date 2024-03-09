@@ -3,9 +3,10 @@ const { z } = require("zod");
 const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
+const cors = require("cors");
 
 const PORT = 8081;
-
+server.use(cors());
 const schemaPackageTypes = z.enum(["компрессия", "некомпрессия"]);
 
 const schemaCreate = z
