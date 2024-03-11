@@ -1,0 +1,27 @@
+.form_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.form_row input[type="text"]{
+  width: 500px;
+  height: 36px;
+}
+.form_row select{
+width: 508px;
+height: 36px;
+}
+.form_row textarea{
+width: 503px;
+height:95px;
+
+}
+.edit_page .buttons,
+.create_page .buttons {
+  width: 420px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto; 
+  margin-top: 50px;
+}

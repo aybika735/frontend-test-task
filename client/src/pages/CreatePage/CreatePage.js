@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { createTodo } from "../../app/slices/todoSlice";
 import { useNavigate } from "react-router-dom";
 import CustomForm from "../../components/CustomForm";
+import styles from '../../styles/CreatePage.module.css'
 const CreatePage = () => {
   const [packsNumber, setPacksNumber] = useState("");
   const [packageType, setPackageType] = useState("компрессия");
@@ -21,7 +22,7 @@ const CreatePage = () => {
     navigate("/"); 
   };
   return (
-    <div className="create-page">
+    <div className={styles.create_page}>
       <h2>Создание типа продукции</h2>
       <form onSubmit={handleSubmit}>
       <CustomForm
@@ -34,7 +35,7 @@ const CreatePage = () => {
       description={description}
       setDescription={setDescription}
     />
-        <div className="buttons">
+        <div className={styles.buttons}>
           <button type="button" onClick={handleCancel}>
             Отмена
           </button>

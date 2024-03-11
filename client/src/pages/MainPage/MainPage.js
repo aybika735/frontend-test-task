@@ -8,6 +8,7 @@ import info from "../../icon/text.png";
 import deleteIcon from "../../icon/garbage.png";
 import editIcon from "../../icon/pencil.png";
 import ConfirmDialog from "../../components/ConfirmDialog";
+import styles from '../../styles/MainPage.module.css'
 
 const MainPage = () => {
   const [confirmOpen, setConfirmOpen] = useState(false);
@@ -54,10 +55,10 @@ const MainPage = () => {
   }, []);
 
   return (
-    <div className="mainPage">
-      <div className="main_title">
+    <div className={styles.mainPage}>
+      <div className={styles.main_title}>
         <h2>Список выпускаемой продукции</h2>
-        <div onClick={handleCreateClick} className="title_create">
+        <div onClick={handleCreateClick} className={styles.title_create}>
           Создать тип продукции
         </div>
       </div>
@@ -70,8 +71,8 @@ const MainPage = () => {
             <th>Дата создания</th>
             <th>Статус</th>
             <th></th>
-            <th className="no-border-right"></th>
-            <th className="no-border-left"></th>
+            <th className={styles.no_border_right}></th>
+            <th className={styles.no_border_left}></th>
           </tr>
         </thead>
         <tbody>
@@ -90,14 +91,14 @@ const MainPage = () => {
                   <img src={info} alt="Инфо" style={{ cursor: "pointer" }} />
                 </Tooltip>
               </td>
-              <td className="no-border-right">
+              <td className={styles.no_border_right}>
                 <img
                   src={editIcon}
                   alt="Редактировать"
                   onClick={() => handleEditClick(todo.id)}
                 />
               </td>
-              <td className="no-border-left">
+              <td className={styles.no_border_left}>
                 <img
                   src={deleteIcon}
                   alt="Удалить"

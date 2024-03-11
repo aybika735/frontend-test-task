@@ -4,17 +4,9 @@
       "id": "2Pj88Fh",
       "packsNumber": 12,
       "packageType": "некомпрессия",
-      "isArchived": false,
+      "isArchived": true,
       "createdAt": "2024-01-25T16:08:24.630Z",
       "description": "Описание продукции\nВ несколько строк"
-    },
-    {
-      "id": "2Pj88Fv",
-      "packsNumber": 24,
-      "packageType": "некомпрессия",
-      "isArchived": true,
-      "createdAt": "2024-01-23T16:08:24.630Z",
-      "description": "hhhh"
     },
     {
       "packsNumber": 8,

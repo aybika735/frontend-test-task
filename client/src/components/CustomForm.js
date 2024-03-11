@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styles from '../styles/CustomForm.module.css'
 
 const CustomForm = ({
   packsNumber,
@@ -13,7 +13,7 @@ const CustomForm = ({
 }) => {
   return (
     <div>
-      <div className="form-row">
+      <div className={styles.form_row}>
         <span>Кол-во пачек *</span>
         <input
           type="text"
@@ -22,7 +22,7 @@ const CustomForm = ({
           required
         />
       </div>
-      <div className="form-row">
+      <div className={styles.form_row}>
         <span>Тип упаковки *</span>
         <select
           value={packageType}
@@ -32,7 +32,7 @@ const CustomForm = ({
           <option value="некомпрессия">некомпрессия</option>
         </select>
       </div>
-      <div className="form-row">
+      <div className={styles.form_row}>
         <span>Архивировано</span>
         <input
           type="checkbox"
@@ -40,7 +40,7 @@ const CustomForm = ({
           onChange={(e) => setIsArchived(e.target.checked)}
         />
       </div>
-      <div className="form-row">
+      <div className={styles.form_row}>
         <span>Описание</span>
         <textarea
           value={description}

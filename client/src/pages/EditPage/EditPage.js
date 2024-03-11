@@ -4,6 +4,7 @@ import { editTodobyId, todoDeleteById } from "../../app/slices/todoSlice";
 import { useNavigate } from "react-router-dom";
 import ConfirmDialog from "../../components/ConfirmDialog";
 import CustomForm from "../../components/CustomForm";
+import styles from '../../styles/CreatePage.module.css'
 const EditPage = () => {
   const [packsNumber, setPacksNumber] = useState("");
   const [packageType, setPackageType] = useState("");
@@ -51,7 +52,7 @@ const EditPage = () => {
   };
 
   return (
-    <div className="edit-page">
+    <div className={styles.edit_page}>
       <h2>Редактирование типа продукции</h2>
       <form onSubmit={handleSubmit}>
       <CustomForm
@@ -65,7 +66,7 @@ const EditPage = () => {
       description={description}
       setDescription={setDescription}
     />
-        <div className="buttons">
+        <div className={styles.buttons}>
           <button type="button" onClick={() => setConfirmOpen(true)}>
             Удалить
           </button>

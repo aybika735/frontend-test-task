@@ -1,0 +1,62 @@
+.edit_page,
+.create_page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.edit_page h2,
+.create_page h2 {
+  margin-bottom: 50px;
+}
+.edit_page .buttons,
+.create_page .buttons {
+  width: 420px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto; 
+  margin-top: 50px;
+}
+.create_page .buttons{
+  width: 260px;
+}
+.edit_page button, 
+.create_page button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgba(247, 238, 85, 1);
+  border: 1px solid rgba(0, 0, 0, 1);
+  color: black;
+}
+
+.edit_page button[type="button"],
+.create_page button[type="button"] {
+  background: rgba(0, 0, 0, 1);
+  border: 1px solid rgba(0, 0, 0, 1);
+  color: white;
+
+}
+.edit_page button:hover 
+.create_page button:hover {
+  opacity: 0.9;
+}
+.buttons button{
+
+  height: 48px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+.edit_page input[type="checkbox"],
+.create_page input[type="checkbox"] {
+margin-right: 470px;
+  width: 24px;
+  height: 24px;
+
+}
+.edit_page .buttons button:first-child {
+  background: rgba(218, 21, 21, 1);
+  border: 1px solid rgba(0, 0, 0, 1);
+  color: white;
+}
