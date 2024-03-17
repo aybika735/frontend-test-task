@@ -7,7 +7,7 @@ import Tooltip from "@mui/material/Tooltip";
 import info from "../../icon/text.png";
 import deleteIcon from "../../icon/garbage.png";
 import editIcon from "../../icon/pencil.png";
-import ConfirmDialog from "../../components/ConfirmDialog";
+import ConfirmDialog from "../../components/ConfirmDialog/ConfirmDialog";
 import styles from '../../styles/MainPage.module.css'
 
 const MainPage = () => {
@@ -25,29 +25,28 @@ const MainPage = () => {
     });
   }, [dispatch]);
 
-  const handleCreateClick = () => {
+  const handleCreateClick = useCallback(() => {
     navigate("/create");
-  };
+  }, [navigate]);
 
-  const handleEditClick = (id) => {
+  const handleEditClick = useCallback((id) => {
     dispatch(fetchTodobyId(id));
     navigate(`/edit`);
-  };
+  }, [dispatch, navigate]);
 
-  const handleDelete = () => {
-    if (selectedId !== false) {
+  const handleDelete = useCallback(() => {
+    if (selectedId !== null) {
       dispatch(todoDeleteById(selectedId)).then(() => {
-        setTodos(todos.filter((todo) => todo.id !== selectedId));
         setConfirmOpen(false);
-        setSelectedId(false);
+        setSelectedId(null);
       });
     }
-  };
+  }, [dispatch, selectedId]);
   
-  const handleDeleteClick = (id) => {
+  const handleDeleteClick = useCallback((id) => {
     setSelectedId(id);
     setConfirmOpen(true);
-  };
+  }, []);
 
   const formatDate = useCallback((dateString) => {
     return dateString.slice(0, -14).split('-').reverse().join('.');
@@ -120,4 +119,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default React.memo(MainPage);

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { editTodobyId, todoDeleteById } from "../../app/slices/todoSlice";
 import { useNavigate } from "react-router-dom";
-import ConfirmDialog from "../../components/ConfirmDialog";
-import CustomForm from "../../components/CustomForm";
+import ConfirmDialog from "../../components/ConfirmDialog/ConfirmDialog";
+import CustomForm from "../../components/CustomForm/CustomForm";
 import styles from '../../styles/CreatePage.module.css'
 const EditPage = () => {
   const [packsNumber, setPacksNumber] = useState("");
@@ -87,4 +87,4 @@ const EditPage = () => {
   );
 };
 
-export default EditPage;
+export default React.memo(EditPage);

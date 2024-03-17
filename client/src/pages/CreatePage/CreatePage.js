@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { createTodo } from "../../app/slices/todoSlice";
 import { useNavigate } from "react-router-dom";
-import CustomForm from "../../components/CustomForm";
+import CustomForm from "../../components/CustomForm/CustomForm";
 import styles from '../../styles/CreatePage.module.css'
 const CreatePage = () => {
   const [packsNumber, setPacksNumber] = useState("");
@@ -18,9 +18,9 @@ const CreatePage = () => {
     navigate("/");
   };
 
-  const handleCancel = () => {
-    navigate("/"); 
-  };
+  const handleCancel = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
   return (
     <div className={styles.create_page}>
       <h2>Создание типа продукции</h2>

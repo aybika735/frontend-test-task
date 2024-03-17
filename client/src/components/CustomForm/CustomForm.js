@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/CustomForm.module.css'
+import styles from '../../styles/CustomForm.module.css'
 
 const CustomForm = ({
   packsNumber,
@@ -11,6 +11,7 @@ const CustomForm = ({
   description,
   setDescription,
 }) => {
+
   return (
     <div>
       <div className={styles.form_row}>
@@ -51,4 +52,4 @@ const CustomForm = ({
   );
 };
 
-export default CustomForm;
+export default React.memo(CustomForm);

@@ -7,6 +7,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
 
 const ConfirmDialog = ({ open, onClose, onConfirm, title, message }) => {
+
   return (
     <Dialog
       open={open}
@@ -32,4 +33,4 @@ const ConfirmDialog = ({ open, onClose, onConfirm, title, message }) => {
   );
 };
 
-export default ConfirmDialog;
+export default React.memo(ConfirmDialog);
